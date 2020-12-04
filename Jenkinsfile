@@ -5,7 +5,7 @@ pipeline {
         stage('compile') {
             steps {
                
-                sh './mvnw.cmd clean compile -e'
+                bat './mvnw.cmd clean compile -e'
                 
                 
             }
@@ -13,21 +13,21 @@ pipeline {
         stage('test code') {
             steps {
                
-                sh './mvnw.cmd clean test -e'
+                bat './mvnw.cmd clean test -e'
                 
             }
         }
         stage('jar code') {
             steps {
               
-                sh './mvnw.cmd clean package -e'
+                bat './mvnw.cmd clean package -e'
                
             }
         }
         stage('run jar') {
             steps {
                 
-                 sh 'JENKINS_NODE_COOKIE=dontKillMe nohup bash mvnw spring-boot:run &'
+                 bat 'JENKINS_NODE_COOKIE=dontKillMe nohup bash mvnw spring-boot:run &'
                
                 
             }
