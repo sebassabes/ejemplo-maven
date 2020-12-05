@@ -1,5 +1,5 @@
-# Ahora esta jenkins
-siempre se aprende algo nuevo
+# Jenkis con SonarQube
+ahora jeckins puede trabajr con sonarqube se añadio el comando para ejecutar el sonarqube con maven en el archivo Jenkins file
 # Getting Started
 
 ## Windows
